@@ -43,7 +43,7 @@ public class CustomListTest {
 
         int count = cityList.countCities();
 
-        assertEquals(3, count);
+        assertEquals(2, count);
     }
 
     @Test
@@ -59,6 +59,9 @@ public class CustomListTest {
         assertEquals(1, cityList.countCities());
 
         cityList.delete(city1);
+        assertEquals(0, cityList.countCities());
+
+        cityList.addCity(city2);
         assertEquals(1, cityList.countCities());
 
         cityList.delete(city2);
